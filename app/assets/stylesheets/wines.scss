@@ -4,12 +4,12 @@
 
 .wine-form{
 	z-index: 10;
-	border:10px solid rgba(0,0,0,0.2);
 	border-radius:5px;
 	display:flex;
 	flex-wrap:wrap;
-	align-content:center;
-	flex:1;
+
+	
+	width:50%;
 }
 
 .wine-form > * {
@@ -20,10 +20,47 @@
 	font-size: 20px;
 	border-radius:0;
 	outline:0;
-	border-right:1px solid rgba(0,0,0,0.2);
-	border-bottom:1px solid rgba(0,0,0,0.2);
+	border:1px solid rgba(0,0,0,0.2);
 	-webkit-appearance:none;
-	flex-basis: calc(33.33333%);
+	flex-basis: calc(100%);
 	align-content: flex-start;
+	margin-bottom: 10px;
 
 }
+
+.wines{
+	display: flex;
+	flex-wrap: wrap;
+	width:100%;	
+}
+
+.wine{
+	flex:1;
+	flex-basis: calc(50% - 20px);
+	margin:10px;
+	display:flex;
+	flex-direction: column;
+}
+
+.wine > * {
+	flex:1;
+	display:flex;
+}
+
+.wine > * > * {
+	flex:1;
+	width:50%;
+}
+
+h1{
+	color: #ffc600;
+}
+
+p {
+	color:black;
+}
+
+.wine > a {
+	color:black;
+}
+

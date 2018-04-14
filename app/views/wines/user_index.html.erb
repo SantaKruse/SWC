@@ -1,30 +1,45 @@
 <div class="container">
   <div class="app-wrap">
-  	<div class="header">
-  		<div class="item">
-  			<%= link_to "Home", root_path(anchor: "home"), class: "scroll-item" %>
-   		</div>
-   		<div class="item">
-   			<p>My Account</p>
-   		</div>
-   		<div class="item">
-   			<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-   		</div>
-  	</div>
-  	<div class="content">
+    <div class="header">
       <div class="item">
-      </div>	
+        <%= link_to "Home", root_path(anchor: "home"), class: "scroll-item" %>
+      </div>
+      <div class="item">
+        <p>My Account</p>
+      </div>
+      <div class="item">
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      </div>
+    </div>
+    <div class="content">
+      <div class="item">
+        <div class="wines">
+          <% @wines.each do |wine| %>
+            <div class="wine"> 
+              <p><%= wine.name %> </p>
+              <p><%= wine.region %> </p>
+              <p><%= wine.average_vivino_rating %> </p>
+              <p><%= wine.average_vivino_price %> </p>
+              <p><%= wine.winery %> </p>
+              <p><%= wine.grapes %> </p>
+              <p><%= wine.regional_styles %> </p>
+              <p><%= wine.food_pairing %> </p>
+              <%= link_to "Edit", edit_wine_path(wine.id) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
     <div class="footer">
-   		<div class="item">
-   			<%= link_to "All wines", wines_path %>
-   		</div>
-   		<div class="item">
-   			<%= link_to "My wines", user_wines_path %>
-   		</div>
-   		<div class="item">
-   			<%= link_to "Add a new wine", new_wine_path %>
-   		</div>
+      <div class="item">
+        <%= link_to "All wines", wines_path %>
+      </div>
+      <div class="item">
+        <%= link_to "My wines", user_wines_path %>
+      </div>
+      <div class="item">
+        <%= link_to "Add a new wine", new_wine_path %>
+      </div>
     </div>
   </div>
 </div>

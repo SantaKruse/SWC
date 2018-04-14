@@ -34,7 +34,7 @@ class WinesController < ApplicationController
 
 	def update
 		if @wine.update(wine_params)
-			redirect_to @wine
+			redirect_to wines_path
 		else
 			render 'edit'
 		end

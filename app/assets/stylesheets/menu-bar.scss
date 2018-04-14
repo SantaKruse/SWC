@@ -19,8 +19,8 @@
 		font-size:1em;
 		color:white;
 		font-weight:bold;
-  		padding:1.5rem;
   		border-left:1px solid white;
+  		display:flex;
 	}
 }
 
@@ -38,42 +38,58 @@
 		font-size:2em;
 		color:white;
 		font-weight:bold;
-  		padding:1.5rem;
   		border-left:1px solid white;
+  		display:flex;
+	}
+
+	.content{
+		margin-bottom: 12%;
 	}
 }
 
 .app-wrap > * {
-	align-items:center;
+	align-items:start;
 	justify-content:center;
+	align-items: stretch;
+	display:flex;
 }
 
 .header{
 	flex:1;
-	display:flex;
 	background-color: #ffc600;
 }
 
 .content{
-	display:flex;
+	flex:10;
 	overflow-y:scroll;
 	-webkit-overflow-scrolling:touch;
 	background-color: white;
-	flex:13;
 }
 
 .footer{
-	display:flex;
-	background-color: #ffc600;
-	flex-shrink: 0;
 	flex:1;
+	background-color: #ffc600;
 }
 
 .item > a{
-	    display:inline-block;
-    	width:100%;
-    	height:100%;
+    display:inline-block;
+	width:100%;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 
+.item > a > span{
+	flex:1;
+}
+
+/*.form{
+	display:flex;
+	align-items:center;
+  	justify-content:center;
+  	flex-direction: column;
+}
+*/
 
 

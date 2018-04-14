@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  resources :wines, only: [:index, :new, :create, :show]
+  resources :wines, only: [:index, :new, :create, :show, :edit, :update]
   get 'user_wines', to: 'wines#user_index'
   
 end

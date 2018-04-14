@@ -5,14 +5,52 @@
   			<%= link_to "Home", root_path(anchor: "home"), class: "scroll-item" %>
    		</div>
    		<div class="item">
-   			<p>My Account</p>
-   		</div>
-   		<div class="item">
-   			<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+   			<%= link_to "My Account", root_path(anchor: "home"), class: "scroll-item" %>
    		</div>
   	</div>
   	<div class="content">
     	<div class="item">
+        <div class="wines">
+          <% @wines.each do |wine| %>
+             <div class="wine">
+              <div class="wine-detail">
+                <p>Name</p>
+                <p><%= wine.name %> </p>
+              </div> 
+              <div class="wine-detail">
+                <p>Region</p>
+                <p><%= wine.region %> </p>
+              </div> 
+              <div class="wine-detail">
+                <p>Average Vivino rating</p>
+                <p><%= wine.average_vivino_rating %></p>
+              </div> 
+              <div class="wine-detail">
+                <p>Average Vivino price</p>
+                <p><%= wine.average_vivino_price %></p>
+              </div> 
+              <div class="wine-detail">
+                <p>Winery</p>
+                <p><%= wine.winery %> </p>
+              </div>               
+              <div class="wine-detail">
+                <p>Grapes</p>
+                <p><%= wine.grapes %> </p>
+              </div>               
+              <div class="wine-detail">
+                <p>Regional styles</p>
+                <p><%= wine.regional_styles %> </p>
+              </div>               
+              <div class="wine-detail">
+                <p>Food Pairings</p>
+                <p><%= wine.food_pairing %> </p>
+              </div>  
+               <div class="wine-control-bar">
+                <%= link_to "Edit", edit_wine_path(wine.id) %>
+              </div>                        
+            </div>
+          <% end %> 
+        </div>
       </div>
     </div>
     <div class="footer">
