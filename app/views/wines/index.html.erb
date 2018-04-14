@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="app-wrap">
+  	<div class="header">
+  		<div class="item">
+  			<%= link_to "Home", root_path(anchor: "home"), class: "scroll-item" %>
+   		</div>
+   		<div class="item">
+   			<p>My Account</p>
+   		</div>
+   		<div class="item">
+   			<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+   		</div>
+  	</div>
+  	<div class="content">
+    	<div class="item">
+      </div>
+    </div>
+    <div class="footer">
+   		<div class="item">
+   			<%= link_to "All wines", wines_path %>
+   		</div>
+   		<div class="item">
+   			<%= link_to "My wines", user_wines_path %>
+   		</div>
+   		<div class="item">
+   			<%= link_to "Add a new wine", new_wine_path %>
+   		</div>
+    </div>
+  </div>
+</div>

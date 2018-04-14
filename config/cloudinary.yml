@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dwlgyxzcx
+  api_key: '953924256314118'
+  api_secret: 6BQ6VbevbmbkNcUPwC1q-85TACA
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dwlgyxzcx
+  api_key: '953924256314118'
+  api_secret: 6BQ6VbevbmbkNcUPwC1q-85TACA
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dwlgyxzcx
+  api_key: '953924256314118'
+  api_secret: 6BQ6VbevbmbkNcUPwC1q-85TACA
+  enhance_image_tag: true
+  static_image_support: false

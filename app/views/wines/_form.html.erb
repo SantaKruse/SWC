@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="app-wrap">
+  	<div class="header">
+  		<div class="item">
+  			<%= link_to "Home", root_path(anchor: "home"), class: "scroll-item" %>
+   		</div>
+   		<div class="item">
+   			<%= link_to "My Account", destroy_user_session_path, method: :delete %>
+   		</div>
+  	</div>
+  	<div class="content">
+      <div class="item">
+      
+        <%= form_for @wine, :html => {:class => 'wine-form'} do |f| %>
+          <% if @wine.errors.any? %>
+            <div id="errors">
+              <h2><%= pluralize(@wine.errors.count, "error") %> prevented this wine from saving</h2>
+              <ul>
+                <% @wine.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>  
+                <% end %>
+              </ul>
+            </div>
+          <% end %> 
+          <%= f.text_field :name, placeholder:'name' %> 
+          <%= f.text_field :region, placeholder:'region' %> 
+          <%= f.text_field :average_vivino_rating, placeholder:'average vivino rating' %> 
+          <%= f.text_field :average_vivino_price, placeholder:'average vivino price' %> 
+          <%= f.text_field :winery, placeholder:'winery' %> 
+          <%= f.text_field :grapes, placeholder:'grapes'%> 
+          <%= f.text_field :regional_styles, placeholder:'regional styles'%> 
+        <% end %> 	
+      </div>
+    </div>
+    <div class="footer">
+   		<div class="item">
+   			<%= link_to "Save", wines_path, class:"save-button" %>
+   		</div>
+   		<div class="item">
+   			<%= link_to 'Cancel', :back %>
+   		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector(".wine-form")
+  const submitButton = document.querySelector(".save-button")
+  submitButton.addEventListener('click', function(){form.submit()})
+</script>
+
+
