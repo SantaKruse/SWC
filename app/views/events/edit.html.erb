@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="app-wrap">
+  	<div class="header">
+  		<div class="item">
+  			<%= link_to "Home", root_path(anchor: "home"), class: "scroll-item" %>
+   		</div>
+   		<div class="item">
+   			<%= link_to "My Account", destroy_user_session_path, method: :delete %>
+   		</div>
+  	</div>
+  	<div class="content">
+      <div class="item">
+        <div class="wine-form-container">
+          <div class="wine-form-name">
+            <h1>edit event</h1>
+          </div>
+          <%= render 'form' %>
+        </div>
+		  </div>
+    </div>
+    <div class="footer">
+   		<div class="item">
+   			<%= link_to "Save", events_path, class:"save-button" %>
+   		</div>
+   		<div class="item">
+   			<%= link_to 'Cancel', :back %>
+   		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var form = document.querySelector(".wine-form-object")
+  var submitButton = document.querySelector(".save-button")
+  submitButton.addEventListener('click', function(){form.submit()})
+</script>

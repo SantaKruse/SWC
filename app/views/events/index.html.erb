@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="app-wrap">
+  	<div class="header">
+  		<div class="item">
+  			<%= link_to "Home", root_path(anchor: "home"), class: "scroll-item" %>
+   		</div>
+   		<div class="item">
+   			<%= link_to "My Account", root_path(anchor: "home"), class: "scroll-item" %>
+   		</div>
+  	</div>
+  	<div class="content">
+    	<div class="item">
+        <div class="wines-container">
+          <% @events.each do |event| %>
+            <div class="wine-container-outer">
+              <div class="wine-container-inner">
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Date</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= event.date %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Time</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= event.time %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Location</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= event.location %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Theme</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= event.theme %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Host</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= event.host_user_id %> </p>
+                  </div>
+                </div> 
+                 <div class="wine-control-bar">
+                  <div class="wine-control">
+                    <%= link_to "Edit", edit_event_path(event.id) %>
+                  </div>
+                  <div class="wine-control">
+                    <%= link_to 'Delete', event_path(event.id), method: :delete, data:{ confirm: "Are you sure?"} %>
+                  </div>
+                </div> 
+              </div>                       
+            </div>
+          <% end %> 
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+   		<div class="item">
+   			<%= link_to "All events", events_path %>
+   		</div>
+   		<div class="item">
+   			<%= link_to "My events", events_path %>
+   		</div>
+   		<div class="item">
+   			<%= link_to "Add a new event", new_event_path %>
+   		</div>
+    </div>
+  </div>
+</div>

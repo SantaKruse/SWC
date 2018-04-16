@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   resources :wines, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   get 'user_wines', to: 'wines#user_index'
+
+  resources :events, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   
 end
