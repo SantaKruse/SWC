@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412215043) do
+ActiveRecord::Schema.define(version: 20180415231229) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20180412215043) do
     t.string   "region"
     t.string   "regional_styles"
     t.string   "food_pairing"
+    t.string   "image"
   end
 
 end

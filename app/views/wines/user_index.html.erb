@@ -5,28 +5,90 @@
         <%= link_to "Home", root_path(anchor: "home"), class: "scroll-item" %>
       </div>
       <div class="item">
-        <p>My Account</p>
-      </div>
-      <div class="item">
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        <%= link_to "My Account", root_path(anchor: "home"), class: "scroll-item" %>
       </div>
     </div>
     <div class="content">
       <div class="item">
-        <div class="wines">
+        <div class="wines-container">
           <% @wines.each do |wine| %>
-            <div class="wine"> 
-              <p><%= wine.name %> </p>
-              <p><%= wine.region %> </p>
-              <p><%= wine.average_vivino_rating %> </p>
-              <p><%= wine.average_vivino_price %> </p>
-              <p><%= wine.winery %> </p>
-              <p><%= wine.grapes %> </p>
-              <p><%= wine.regional_styles %> </p>
-              <p><%= wine.food_pairing %> </p>
-              <%= link_to "Edit", edit_wine_path(wine.id) %>
+            <div class="wine-container-outer">
+              <div class="wine-container-inner">
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Name</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.name %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Region</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.region %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Average Vivino rating</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.average_vivino_rating %></p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Average Vivino price</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.average_vivino_price %></p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Winery</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.winery %> </p>
+                  </div>
+                </div>               
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Grapes</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.grapes %> </p>
+                  </div>
+                </div>               
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Regional styles</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.regional_styles %> </p>
+                  </div>
+                </div>               
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Food Pairings</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.food_pairing %> </p>
+                  </div>
+                </div>  
+                 <div class="wine-control-bar">
+                  <div class="wine-control">
+                    <%= link_to "Edit", edit_wine_path(wine.id) %>
+                  </div>
+                  <div class="wine-control">
+                    <%= link_to 'Delete', wine_path(wine.id), method: :delete, data:{ confirm: "Are you sure?"} %>
+                  </div>
+                </div> 
+              </div>                       
             </div>
-          <% end %>
+          <% end %> 
         </div>
       </div>
     </div>

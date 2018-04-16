@@ -1,4 +1,4 @@
-<%= form_for @wine, :html => {:class => 'wine-form'} do |f| %>
+<%= simple_form_for @wine, :html => {:class => 'wine-form-object'} do |f| %>
   <% if @wine.errors.any? %>
     <div id="errors">
       <h2><%= pluralize(@wine.errors.count, "error") %> prevented this wine from saving</h2>
@@ -17,7 +17,10 @@
   <%= f.text_field :grapes, placeholder:'grapes'%> 
   <%= f.text_field :regional_styles, placeholder:'regional styles'%> 
   <%= f.text_field :food_pairing, placeholder:'food pairings'%> 
+  <%= f.hidden_field :image_cache%> 
+  <%= f.file_field :image%> 
 <% end %> 	
+
       
 
 

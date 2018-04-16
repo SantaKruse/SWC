@@ -10,11 +10,13 @@
   	</div>
   	<div class="content">
       <div class="item">
-      	<div class="form">
-      		<h1>add a new wine</h1>
-			<%= render 'form' %>
-		</div>
-		</div>
+        <div class="wine-form-container">
+          <div class="wine-form-name">
+            <h1>new wine</h1>
+          </div>
+          <%= render 'form' %>
+        </div>
+		  </div>
     </div>
     <div class="footer">
    		<div class="item">
@@ -28,7 +30,7 @@
 </div>
 
 <script>
-  const form = document.querySelector(".wine-form")
-  const submitButton = document.querySelector(".save-button")
+  var form = document.querySelector(".wine-form-object")
+  var submitButton = document.querySelector(".save-button")
   submitButton.addEventListener('click', function(){form.submit()})
 </script>

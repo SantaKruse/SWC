@@ -10,44 +10,86 @@
   	</div>
   	<div class="content">
     	<div class="item">
-        <div class="wines">
+        <div class="wines-container">
           <% @wines.each do |wine| %>
-             <div class="wine">
-              <div class="wine-detail">
-                <p>Name</p>
-                <p><%= wine.name %> </p>
-              </div> 
-              <div class="wine-detail">
-                <p>Region</p>
-                <p><%= wine.region %> </p>
-              </div> 
-              <div class="wine-detail">
-                <p>Average Vivino rating</p>
-                <p><%= wine.average_vivino_rating %></p>
-              </div> 
-              <div class="wine-detail">
-                <p>Average Vivino price</p>
-                <p><%= wine.average_vivino_price %></p>
-              </div> 
-              <div class="wine-detail">
-                <p>Winery</p>
-                <p><%= wine.winery %> </p>
-              </div>               
-              <div class="wine-detail">
-                <p>Grapes</p>
-                <p><%= wine.grapes %> </p>
-              </div>               
-              <div class="wine-detail">
-                <p>Regional styles</p>
-                <p><%= wine.regional_styles %> </p>
-              </div>               
-              <div class="wine-detail">
-                <p>Food Pairings</p>
-                <p><%= wine.food_pairing %> </p>
-              </div>  
-               <div class="wine-control-bar">
-                <%= link_to "Edit", edit_wine_path(wine.id) %>
-              </div>                        
+            <div class="wine-container-outer">
+              <div class="wine-container-inner">
+                <div class="wine-detail">
+                  <div class="wine-detail-image">
+                    <%= image_tag(wine.image_url, :alt => wine.id) %>
+                  </div>
+                  <div class="wine-detail-name">
+                    <p>Name</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.name %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Region</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.region %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Average Vivino rating</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.average_vivino_rating %></p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Average Vivino price</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.average_vivino_price %></p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Winery</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.winery %> </p>
+                  </div>
+                </div>               
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Grapes</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.grapes %> </p>
+                  </div>
+                </div>               
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Regional styles</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.regional_styles %> </p>
+                  </div>
+                </div>               
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Food Pairings</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.food_pairing %> </p>
+                  </div>
+                </div>  
+                 <div class="wine-control-bar">
+                  <div class="wine-control">
+                    <%= link_to "Edit", edit_wine_path(wine.id) %>
+                  </div>
+                  <div class="wine-control">
+                    <%= link_to 'Delete', wine_path(wine.id), method: :delete, data:{ confirm: "Are you sure?"} %>
+                  </div>
+                </div> 
+              </div>                       
             </div>
           <% end %> 
         </div>

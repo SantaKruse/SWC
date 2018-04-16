@@ -23,13 +23,14 @@ class WinesController < ApplicationController
 		@wine = current_user.wines.build(wine_params)
 
 		if @wine.save
-			redirect_to @wine
+			redirect_to wines_path
 		else
 			render 'new'
 		end
 	end
 
 	def edit
+		@wine = Wine.find(params[:id])
 	end
 
 	def update
@@ -52,6 +53,6 @@ class WinesController < ApplicationController
 	end
 
 	def wine_params
-		params.require(:wine).permit(:user_id, :name, :average_vivino_rating, :average_vivino_price, :winery, :grapes, :region, :regional_styles, :food_pairing)
+		params.require(:wine).permit(:user_id, :name, :average_vivino_rating, :average_vivino_price, :winery, :grapes, :region, :regional_styles, :food_pairing, :image, :image_cache)
 	end
 end
