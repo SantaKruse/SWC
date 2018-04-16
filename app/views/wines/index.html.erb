@@ -21,6 +21,14 @@
                 </div>
                 <div class="wine-detail">
                   <div class="wine-detail-name">
+                    <p>Owner</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.user.first_name ? wine.user.first_name + ' ' + wine.user.last_name : wine.user.id %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
                     <p>Name</p>
                   </div>
                   <div class="wine-detail-value">
@@ -29,26 +37,18 @@
                 </div> 
                 <div class="wine-detail">
                   <div class="wine-detail-name">
+                    <p>Year</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.year %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
                     <p>Region</p>
                   </div>
                   <div class="wine-detail-value">
                     <p><%= wine.region %> </p>
-                  </div>
-                </div> 
-                <div class="wine-detail">
-                  <div class="wine-detail-name">
-                    <p>Average Vivino rating</p>
-                  </div>
-                  <div class="wine-detail-value">
-                    <p><%= wine.average_vivino_rating %></p>
-                  </div>
-                </div> 
-                <div class="wine-detail">
-                  <div class="wine-detail-name">
-                    <p>Average Vivino price</p>
-                  </div>
-                  <div class="wine-detail-value">
-                    <p><%= wine.average_vivino_price %></p>
                   </div>
                 </div> 
                 <div class="wine-detail">
@@ -81,6 +81,46 @@
                   </div>
                   <div class="wine-detail-value">
                     <p><%= wine.food_pairing %> </p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Owner rating</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.owner_rating %></p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Owner price</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.owner_price %></p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Average Vivino rating</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.average_vivino_rating %></p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Average Vivino price</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.average_vivino_price %></p>
+                  </div>
+                </div> 
+                <div class="wine-detail">
+                  <div class="wine-detail-name">
+                    <p>Owner comments</p>
+                  </div>
+                  <div class="wine-detail-value">
+                    <p><%= wine.comments %> </p>
                   </div>
                 </div>  
                  <div class="wine-control-bar">

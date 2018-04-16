@@ -53,6 +53,6 @@ class WinesController < ApplicationController
 	end
 
 	def wine_params
-		params.require(:wine).permit(:user_id, :name, :average_vivino_rating, :average_vivino_price, :winery, :grapes, :region, :regional_styles, :food_pairing, :image, :image_cache)
+		params.require(:wine).permit(:user_id, :name, :average_vivino_rating, :average_vivino_price, :winery, :grapes, :region, :regional_styles, :food_pairing, :image, :image_cache, :year, :owner_rating, :owner_price, :comments)
 	end
 end

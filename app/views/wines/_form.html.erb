@@ -10,13 +10,17 @@
     </div>
   <% end %> 
   <%= f.text_field :name, placeholder:'name' %> 
+  <%= f.text_field :year, placeholder:'year' %> 
   <%= f.text_field :region, placeholder:'region' %> 
+  <%= f.text_field :owner_rating, placeholder:'owner rating' %> 
+  <%= f.text_field :owner_price, placeholder:'owner price' %> 
   <%= f.text_field :average_vivino_rating, placeholder:'average vivino rating' %> 
   <%= f.text_field :average_vivino_price, placeholder:'average vivino price' %> 
   <%= f.text_field :winery, placeholder:'winery' %> 
   <%= f.text_field :grapes, placeholder:'grapes'%> 
   <%= f.text_field :regional_styles, placeholder:'regional styles'%> 
   <%= f.text_field :food_pairing, placeholder:'food pairings'%> 
+  <%= f.text_field :comments, placeholder:'comments'%> 
   <%= f.hidden_field :image_cache%> 
   <%= f.file_field :image%> 
 <% end %> 	
