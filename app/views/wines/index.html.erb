@@ -16,8 +16,10 @@
               <div class="wine-container-inner">
                 <div class="wine-detail">
                   <div class="wine-detail-image">
-                    <%= image_tag(wine.image_url, :alt => wine.id) %>
+                    <%= image_tag(wine.image_url, :alt => wine.id, :width=>200, :crop=>"scale") %>
                   </div>
+                </div>
+                <div class="wine-detail">
                   <div class="wine-detail-name">
                     <p>Name</p>
                   </div>
