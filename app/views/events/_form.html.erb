@@ -9,9 +9,8 @@
       </ul>
     </div>
   <% end %> 
-  <%= f.text_field :date, placeholder:'date' %> 
-  <%= f.text_field :time, placeholder:'time' %> 
+  <%= f.date_field :date, placeholder:'date' %> 
+  <%= f.time_field :time, placeholder:'time' %> 
   <%= f.text_field :location, placeholder:'location' %> 
   <%= f.text_field :theme, placeholder:'theme' %> 
-  <%= f.hidden_field :host_user_id, input_html: {value: current_user.id} %> 
 <% end %> 	
