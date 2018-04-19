@@ -23,3 +23,5 @@ end
 #   has_many :appointments
 #   has_many :physicians, through: :appointments
 # end
+
+# https://www.youtube.com/watch?v=V8q2sYC1QtI
