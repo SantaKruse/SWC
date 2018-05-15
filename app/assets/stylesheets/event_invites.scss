@@ -2,6 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.wine-form-invite-object.wine-form-object {
+.invite-form-container {
 	color:black;
+	flex:1;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;	
+	border: solid 1px lightgrey;
+}
+
+.invite-form-container > * {
+	width: 100%;
+	display:flex;
+	flex-direction: column;
+}
+
+.invite-form-name > * {
+	margin:10;
+}
+
+.invite-form-object{
+	padding:20px 10px 20px 10px;
+	flex:1;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	overflow-y:auto;
+	-webkit-overflow-scrolling:touch;
+	flex-wrap: wrap;
+}
+
+.invite-form-object > * {
+	flex-basis: 40%;
+	margin:5px;
+	line-height: 3;
+	font-size: 20px;
 }

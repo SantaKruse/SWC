@@ -10,8 +10,8 @@
   	</div>
   	<div class="content">
       <div class="item">
-        <div class="wine-form-container">
-          <div class="wine-form-name">
+        <div class="event-form-container">
+          <div class="event-form-name">
             <h1>edit event</h1>
           </div>
           <%= render 'form' %>
@@ -30,7 +30,7 @@
 </div>
 
 <script>
-  var form = document.querySelector(".wine-form-object")
+  var form = document.querySelector(".event-form-object")
   var submitButton = document.querySelector(".save-button")
   submitButton.addEventListener('click', function(){form.submit()})
 </script>

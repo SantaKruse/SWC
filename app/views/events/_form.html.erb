@@ -1,4 +1,4 @@
-<%= simple_form_for @event, :html => {:class => 'wine-form-object'} do |f| %>
+<%= simple_form_for @event, :html => {:class => 'event-form-object'} do |f| %>
   <% if @event.errors.any? %>
     <div id="errors">
       <h2><%= pluralize(@event.errors.count, "error") %> prevented this event from saving</h2>
@@ -13,15 +13,18 @@
   <%= f.time_field :time, placeholder:'time' %> 
   <%= f.text_field :location, placeholder:'location' %> 
   <%= f.text_field :theme, placeholder:'theme' %> 
-  <div class="wine-form-object">
-    <%= f.simple_fields_for :event_invites do |invite| %>
-        <%= render 'event_invite_fields', f: invite %>
-   
-  <div>
-  <%= link_to_add_association 'Add invite', f, :event_invites %>
-  </div>
+  <div class="invite-form-container">
+    <div class="invite-form-object" >
 
- <% end %>
+      <%= f.simple_fields_for :event_invites do |invite| %>
+        <%= render 'event_invite_fields', f: invite %>
+      <% end %>
+
+    </div>
+                      <div>
+        <%= link_to_add_association 'Add invite', f, :event_invites %>
+      </div>
   </div>
-  
 <% end %> 	
+
+
