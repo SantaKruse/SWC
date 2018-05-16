@@ -8,7 +8,7 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
   config.assets.initialize_on_precompile = false
   config.serve_static_assets = true
-  config.assets.compile = true
+  #config.assets.compile = true
   #config.force_ssl = false
   config.log_level = :debug
   config.log_tags = [ :request_id ]
