@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417211353) do
+ActiveRecord::Schema.define(version: 20180520112803) do
+
+  create_table "event_invites", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.integer  "wine_id"
+  end
 
   create_table "events", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -46,7 +54,7 @@ ActiveRecord::Schema.define(version: 20180417211353) do
     t.datetime "updated_at",            null: false
     t.integer  "user_id"
     t.string   "name"
-    t.integer  "average_vivino_rating"
+    t.decimal  "average_vivino_rating"
     t.decimal  "average_vivino_price"
     t.string   "winery"
     t.string   "grapes"
@@ -55,7 +63,7 @@ ActiveRecord::Schema.define(version: 20180417211353) do
     t.string   "food_pairing"
     t.string   "image"
     t.integer  "year"
-    t.integer  "owner_rating"
+    t.decimal  "owner_rating"
     t.decimal  "owner_price"
     t.text     "comments"
   end
