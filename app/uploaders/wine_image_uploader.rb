@@ -16,7 +16,7 @@ include Cloudinary::CarrierWave
   end
 
   def public_id
-    return model.id
+    return wine.id
   end 
 
 end
