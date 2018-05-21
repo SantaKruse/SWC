@@ -4,7 +4,7 @@ class WineImageUploader < CarrierWave::Uploader::Base
 
 include Cloudinary::CarrierWave
 
-  process :convert => 'png'
+  process :convert => 'jpg'
   process :tags => ['wine_picture']
 
   version :standard do
