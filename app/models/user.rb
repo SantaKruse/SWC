@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :wines
   has_many :events
+  has_many :event_invites
 end
 
 

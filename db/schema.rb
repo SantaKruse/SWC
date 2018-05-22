@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180520112803) do
 
+
   create_table "event_invites", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
