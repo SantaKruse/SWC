@@ -4,7 +4,7 @@ class WineImageUploader < CarrierWave::Uploader::Base
 
 include Cloudinary::CarrierWave
 
-  process :convert => 'png'
+  process :convert => 'jpg'
   process :tags => ['wine_picture']
 
   version :standard do
@@ -15,8 +15,5 @@ include Cloudinary::CarrierWave
     resize_to_fit(50, 50)
   end
 
-  def public_id
-    return model.id
-  end 
 
 end

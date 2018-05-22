@@ -9,5 +9,10 @@ class AddFieldsToWines < ActiveRecord::Migration[5.0]
   	add_column :wines, :region, :string
   	add_column :wines, :regional_styles, :string
   	add_column :wines, :food_pairing, :string
+    add_column :wines, :image, :string
+    add_column :wines, :year, :integer
+    add_column :wines, :owner_rating, :integer
+    add_column :wines, :owner_price, :decimal
+    add_column :wines, :comments, :text
   end
 end

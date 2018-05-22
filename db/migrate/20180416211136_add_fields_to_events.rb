@@ -4,6 +4,6 @@ class AddFieldsToEvents < ActiveRecord::Migration[5.0]
   	add_column :events, :time, :time
   	add_column :events, :location, :string
   	add_column :events, :theme, :string
-  	add_column :events, :host_user_id, :integer
+  	add_column :events, :user_id, :integer
   end
 end

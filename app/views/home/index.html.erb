@@ -5,7 +5,7 @@
   			<%= link_to "Home", root_path(anchor: "home"), class: "blah" %>
    		</div>
    		<div class="item">
-   			<%= link_to "My Account", wines_path %>
+   			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
    		</div>
   	</div>
   	<div class="content">
