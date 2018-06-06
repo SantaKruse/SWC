@@ -1,5 +1,5 @@
 class Wine < ApplicationRecord
 	mount_uploader :image, WineImageUploader
 	belongs_to :user
-	belongs_to :event_invite
+	has_many :event_invites
 end

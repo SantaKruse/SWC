@@ -1,4 +1,4 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<!-- <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -41,3 +41,35 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+ -->
+
+<div class="container">
+  <div class="app-wrap">
+    <div class="header">
+      <div class="item">
+        <%= link_to "Home", root_path(anchor: "home"), class: "blah" %>
+      </div>
+      <div class="item">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      </div>
+    </div>
+    <div class="content">
+      <%= render 'form' %>
+    </div>
+    <div class="footer">
+      <div class="item">
+        <%= link_to "Save", :back, class:"save-button"%>
+      </div>
+      <div class="item">
+        <%= link_to 'Cancel', :back %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  var form = document.querySelector(".wine-form-object")
+  var submitButton = document.querySelector(".save-button")
+  submitButton.addEventListener('click', function(){form.submit()})
+</script>

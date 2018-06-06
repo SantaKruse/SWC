@@ -1,5 +1,5 @@
 <div class="nested-fields">
-	<%= f.input :user_id %> 
-	<%= f.input :wine_id %> 
+	<%= f.association :user, collection: User.order(:first_name),  :label_method => lambda { |user| "#{user.first_name} #{user.last_name}" } %>
+	<%= f.association :wine, collection: Wine.where(user_id: current_user).order(:name),  :label_method => lambda { |wine| "#{wine.name} | #{wine.year}" } %>
 	<%= link_to_remove_association 'Remove invite', f %>
 </div>

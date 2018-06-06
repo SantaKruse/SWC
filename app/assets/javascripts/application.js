@@ -18,7 +18,7 @@
 
 $(document).ready(function() {
     $(".add_fields").
-    data("association-insertion-position", 'append').
+    data("association-insertion-method", 'append').
     data("association-insertion-node", '.invite-form-object');
 })
 
